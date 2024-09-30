@@ -9,10 +9,6 @@ public class GameBoard {
     int boardSize;
     char board[][];
     Queue<Players> turn;
-    int[] rowSum;
-    int[] colSum;
-    int leftDiagonalSum;
-    int rightDiagonalSum;
 
     public GameBoard(int boardSize, List<Players> playersList) {
         this.boardSize = boardSize;
@@ -22,11 +18,6 @@ public class GameBoard {
         // Initialize turn queue with the players
         turn = new LinkedList<>(playersList);
 
-        // Initialize sums for rows, columns, and diagonals
-        rowSum = new int[boardSize];
-        colSum = new int[boardSize];
-        leftDiagonalSum = 0;
-        rightDiagonalSum = 0;
     }
 
     private void initializeBoard(int boardSize) {
